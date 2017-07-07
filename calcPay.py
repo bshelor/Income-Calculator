@@ -19,11 +19,11 @@ def calculatePay():
 
 def calcTax(income):
 	state = calcStateTax(income)
-	print(state)
+	#print(state)
 	fed = calcFederalTax(income)
-	print("Fed  "+str(fed))
+	#print("Fed  "+str(fed))
 	FICA = calcFICATax(income)
-	print("FICA  "+str(FICA))
+	#print("FICA  "+str(FICA))
 
 	totalTax = state + fed + FICA
 
