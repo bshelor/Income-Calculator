@@ -25,7 +25,7 @@ def calcTax(income):
 	FICA = calcFICATax(income)
 	#print("FICA  "+str(FICA))
 
-	totalTax = state + fed + FICA
+	totalTax = state + fed + FICA + .25
 
 	## -.25 for flower fund
 
@@ -53,7 +53,7 @@ def myHelp():
 def calcStateTax(income):
 	string = str(sys.argv[3]).lower()
 	if (string == 'il' or string == "illinois"):
-		return (income * .0375)
+		return (income * .04949787)
 	elif (string == 'mo' or string == "missouri"):
 		return (income * .06)
 
@@ -61,7 +61,7 @@ def calcFederalTax(income):
 	## based off the 2017 tax brackets (taxfoundation.com)
 	## for single workers
 	if (income > 0 and income < 9325):
-		return (income * .10)
+		return (income * .09245)
 	
 	elif (income >= 9325 and income <= 37950):
 		income = income - 932.5
